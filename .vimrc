@@ -29,6 +29,9 @@ noremap <Enter> o<Esc>
 " insert 模式下
 inoremap <c-d> <Esc>ddi
 
+" Command 模式下
+cnoremap w!! w !sudo tee % >/dev/null
+
 
 " 设置插件
 call plug#begin('~/.vim/plugged')
