@@ -11,14 +11,23 @@ hi cursorline cterm=none
 " hi cursorlinenr ctermfg=red
 hi cursorlinenr ctermfg=235
 
-" 自动居中 vim 搜索结果
-nmap n nzz  
-nmap p pzz
+set ignorecase  " 大小写不敏感
+" set noignorecase  " 大小写敏感
 
 
 " 键映射
 " 将 \ 设置为 , 方便操作
 " let mapleader=','
+
+" 默认 normal 模式下
+" 自动居中 vim 搜索结果
+map n nzz  
+map N Nzz
+" Enter 插入空行
+map <Enter> o<Esc>
+
+" insert 模式下
+imap <c-d> <Esc>ddi
 
 
 " 设置插件
