@@ -15,12 +15,10 @@ hi cursorlinenr ctermfg=235
 nmap n nzz  
 nmap p pzz
 
+
 " 键映射
 " 将 \ 设置为 , 方便操作
 " let mapleader=','
-
-" 设置注释空格
-let g:NERDSpaceDelims=1
 
 
 " 设置插件
@@ -28,3 +26,8 @@ call plug#begin('~/.vim/plugged')
 " 注释插件
 Plug 'scrooloose/nerdcommenter'
 call plug#end()
+
+
+" 插件自定义设置
+" 设置注释空格
+let g:NERDSpaceDelims=1
