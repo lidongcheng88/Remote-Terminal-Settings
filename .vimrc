@@ -3,17 +3,21 @@
 set number
 
 " 设置配色方案
-:colorscheme desert
+colorscheme desert
 
 " 高亮当前行号
-:set cursorline
-:hi cursorline cterm=none
-" :hi cursorlinenr ctermfg=red
-:hi cursorlinenr ctermfg=235
+set cursorline
+hi cursorline cterm=none
+" hi cursorlinenr ctermfg=red
+hi cursorlinenr ctermfg=235
 
 " 自动居中 vim 搜索结果
-:nmap n nzz  
-:nmap p pzz
+nmap n nzz  
+nmap p pzz
+
+" 键映射
+" 将 \ 设置为 , 方便操作
+" let mapleader=','
 
 " 设置注释空格
 let g:NERDSpaceDelims=1
