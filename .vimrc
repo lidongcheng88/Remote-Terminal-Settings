@@ -17,17 +17,17 @@ set ignorecase  " 大小写不敏感
 
 " 键映射
 " 将 \ 设置为 , 方便操作
-" let mapleader=','
+" let noremapleader=','
 
 " 默认 normal 模式下
 " 自动居中 vim 搜索结果
-map n nzz  
-map N Nzz
+noremap n nzz  
+noremap N Nzz
 " Enter 插入空行
-map <Enter> o<Esc>
+noremap <Enter> o<Esc>
 
 " insert 模式下
-imap <c-d> <Esc>ddi
+inoremap <c-d> <Esc>ddi
 
 
 " 设置插件
