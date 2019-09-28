@@ -72,8 +72,8 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(git zsh-autosuggestions)
+# plugins=(git)
+plugins=(git zsh-autosuggestions extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,6 +103,33 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# autojump
+[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
+# fuck
 eval $(thefuck --alias)
+# 防止 copy 的时候覆盖已存在的文件
+alias cp=cp -i
+# 两下 Esc 添加 sudo
+bindkey -s '\e\e' '\C-asudo \C-e'
+
+# 初始化 zplug
+source ~/.zplug/init.zsh
+
+# zplug 安装
+# 错误命令标红
+zplug "zsh-users/zsh-syntax-highlighting"
+
+# 自動檢查套件是否安裝的檢查指示，若有沒有安裝的套件，還會自動提醒您要不要裝
+if ! zplug check --verbose; then
+printf "Install? [y/N]: "
+if read -q; then
+echo; zplug install
+fi
+fi
+
+# 把 zplug 載入
+zplug load
