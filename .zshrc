@@ -73,7 +73,16 @@ ZSH_THEME="af-magic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(git zsh-autosuggestions extract)
+plugins=(
+  autojump
+  cp  # cpv 有进度显示
+  extract  # x -r 解压并删除
+  git  # alias
+  git-escape-magic  # ^ 等特殊符号自动加反斜杆
+  gitignore  # gi [TEMPLATENAME] >> .gitignore
+  zsh-autosuggestions  # 命令提示
+  zsh_reload  # src
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,9 +114,6 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# autojump
-[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
 
 # fuck
 eval $(thefuck --alias)
