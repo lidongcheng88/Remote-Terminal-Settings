@@ -27,9 +27,11 @@ noremap N Nzz
 noremap <Enter> o<Esc>
 
 " insert 模式下
+" Ctrl + D 删除空行
 inoremap <c-d> <Esc>ddi
 
 " Command 模式下
+" :w!! 使用 sudo 权限保存
 cnoremap w!! w !sudo tee % >/dev/null
 
 
@@ -37,6 +39,8 @@ cnoremap w!! w !sudo tee % >/dev/null
 call plug#begin('~/.vim/plugged')
 " 注释插件
 Plug 'scrooloose/nerdcommenter'
+" 默认打开上次编辑位置
+Plug 'farmergreg/vim-lastplace'
 call plug#end()
 
 

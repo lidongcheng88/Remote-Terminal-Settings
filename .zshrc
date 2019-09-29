@@ -116,6 +116,7 @@ alias cp=cp -i
 # 两下 Esc 添加 sudo
 bindkey -s '\e\e' '\C-asudo \C-e'
 
+
 # 初始化 zplug
 source ~/.zplug/init.zsh
 
