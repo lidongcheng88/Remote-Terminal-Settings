@@ -41,6 +41,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdcommenter'
 " 默认打开上次编辑位置
 Plug 'farmergreg/vim-lastplace'
+" 当前单词添加下划线
+Plug 'itchyny/vim-cursorword'
 call plug#end()
 
 
