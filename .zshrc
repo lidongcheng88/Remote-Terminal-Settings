@@ -10,8 +10,7 @@ export ZSH="/root/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="random"
-# ZSH_THEME="spaceship"
-# ZSH_THEME="amuse"
+# ZSH_THEME="cloud"
 ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
@@ -76,10 +75,12 @@ ZSH_THEME="af-magic"
 plugins=(
   autojump
   cp  # cpv 有进度显示
+  celery  # celery 补全
   extract  # x -r 解压并删除
   git  # alias
   git-escape-magic  # ^ 等特殊符号自动加反斜杆
   gitignore  # gi [TEMPLATENAME] >> .gitignore
+  virtualenv  # 主题显示虚拟环境
   zsh-autosuggestions  # 命令提示
   zsh_reload  # src
 )
@@ -114,6 +115,13 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# virtualenv
+alias fa="find $(pwd)-name activate"
+alias activate="source `find $(pwd) -name activate`"
+alias va="source `find $(pwd) -name activate -not -path abc` && cd .."
+# alias va="activate && cd .."
+alias mkv="md venv && cd venv && virtualenv"
 
 # fuck
 eval $(thefuck --alias)
