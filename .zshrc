@@ -115,6 +115,8 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# exa
+export PATH=/root/.cargo/bin:$PATH
 
 # virtualenv
 alias fa="find $(pwd)-name activate"
