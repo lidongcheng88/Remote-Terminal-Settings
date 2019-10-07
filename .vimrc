@@ -14,6 +14,12 @@ hi cursorlinenr ctermfg=235
 set ignorecase  " 大小写不敏感
 " set noignorecase  " 大小写敏感
 
+" Tab 设置
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smartindent
+
 
 " 键映射
 " 将 \ 设置为 , 方便操作
@@ -44,11 +50,12 @@ Plug 'farmergreg/vim-lastplace'
 " 当前单词添加下划线
 Plug 'itchyny/vim-cursorword'
 " 成对补全删除
-Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 
 " 插件自定义设置
 " 设置注释空格
 let g:NERDSpaceDelims=1
+
