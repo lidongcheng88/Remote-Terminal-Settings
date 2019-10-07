@@ -29,6 +29,12 @@ noremap <Enter> o<Esc>
 " insert 模式下
 " Ctrl + D 删除空行
 inoremap <c-d> <Esc>ddi
+" 引号、括号补全
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {<CR>}<ESC>O
 
 " Command 模式下
 " :w!! 使用 sudo 权限保存
