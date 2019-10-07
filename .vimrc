@@ -29,12 +29,6 @@ noremap <Enter> o<Esc>
 " insert 模式下
 " Ctrl + D 删除空行
 inoremap <c-d> <Esc>ddi
-" 引号、括号补全
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {<CR>}<ESC>O
 
 " Command 模式下
 " :w!! 使用 sudo 权限保存
@@ -49,6 +43,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'farmergreg/vim-lastplace'
 " 当前单词添加下划线
 Plug 'itchyny/vim-cursorword'
+" 成对补全删除
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 
