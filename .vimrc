@@ -30,8 +30,6 @@ set smartindent
 " 自动居中 vim 搜索结果
 noremap n nzz  
 noremap N Nzz
-" Enter 插入空行
-noremap <Enter> o<Esc>
 " F3 打开目录树
 nnoremap <silent> <F3> :NERDTree<CR>
 
@@ -57,6 +55,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 " python 源码跳转与代码补全
 Plug 'davidhalter/jedi-vim'
+let g:jedi#completions_command = "<C-l>"
+" 不默认自动补全
+let g:jedi#auto_vim_configuration = 0
+
 " 目录树
 Plug 'scrooloose/nerdtree'
 call plug#end()
