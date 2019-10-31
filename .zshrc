@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/root/.cargo/bin:$PATH
 
 # virtualenv
-alias activate="source `find $(pwd) -name activate`"
+alias act="source `find $(pwd) -name activate`"
 alias va="source `find $(pwd) -name activate` && cd .."
 alias mkv="md venv && cd venv && virtualenv"
 

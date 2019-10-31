@@ -9,7 +9,8 @@ colorscheme desert
 set cursorline
 hi cursorline cterm=none
 " hi cursorlinenr ctermfg=red
-hi cursorlinenr ctermfg=235
+" hi cursorlinenr ctermfg=235
+hi cursorlinenr ctermfg=14
 
 set ignorecase  " 大小写不敏感
 " set noignorecase  " 大小写敏感
@@ -31,6 +32,8 @@ noremap n nzz
 noremap N Nzz
 " Enter 插入空行
 noremap <Enter> o<Esc>
+" F3 打开目录树
+nnoremap <silent> <F3> :NERDTree<CR>
 
 " insert 模式下
 " Ctrl + D 删除空行
@@ -52,6 +55,10 @@ Plug 'itchyny/vim-cursorword'
 " 成对补全删除
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+" python 源码跳转与代码补全
+Plug 'davidhalter/jedi-vim'
+" 目录树
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 
