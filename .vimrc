@@ -27,8 +27,6 @@ set smartindent
 " 自动居中 vim 搜索结果
 noremap n nzz  
 noremap N Nzz
-" F3 打开目录树
-nnoremap <silent> <F3> :NERDTree<CR>
 
 " insert 模式下
 " Ctrl + D 删除空行
@@ -62,3 +60,6 @@ call plug#end()
 let g:NERDSpaceDelims=1
 " Jedi 补全快捷键
 let g:jedi#completions_command = "<C-l>"
+" F3 打开目录树
+map <F3> :NERDTreeToggle<CR>
+
