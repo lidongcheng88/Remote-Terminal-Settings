@@ -23,9 +23,6 @@ set smartindent
 
 
 " 键映射
-" 将 \ 设置为 , 方便操作
-" let noremapleader=','
-
 " 默认 normal 模式下
 " 自动居中 vim 搜索结果
 noremap n nzz  
@@ -55,10 +52,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 " python 源码跳转与代码补全
 Plug 'davidhalter/jedi-vim'
-let g:jedi#completions_command = "<C-l>"
-" 不默认自动补全
-let g:jedi#auto_vim_configuration = 0
-
 " 目录树
 Plug 'scrooloose/nerdtree'
 call plug#end()
@@ -67,4 +60,5 @@ call plug#end()
 " 插件自定义设置
 " 设置注释空格
 let g:NERDSpaceDelims=1
-
+" Jedi 补全快捷键
+let g:jedi#completions_command = "<C-l>"
